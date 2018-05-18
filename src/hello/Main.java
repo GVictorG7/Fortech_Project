@@ -1,14 +1,5 @@
 package hello;
 
-import java.util.ArrayList;
-
-import hello.User;
-import hello.repo.jpa.PortDaoJpa;
-import hello.repo.jpa.StationDaoJpa;
-import hello.repo.jpa.UserDaoJpa;
-import hello.service.StationService;
-import hello.service.UserService;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -27,8 +18,7 @@ public class Main {
 		// jpa.persist(new Port(80, "tcp", null));
 
 		// StationDaoJpa jpa = new StationDaoJpa();
-		// jpa.addPort(1, new Port(21, "tcp"));		
-		
+		// jpa.addPort(1, new Port(21, "tcp"));
 
 		System.out.println("done!");
 	}

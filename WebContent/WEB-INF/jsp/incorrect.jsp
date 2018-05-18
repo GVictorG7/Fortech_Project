@@ -4,8 +4,9 @@
 <title>Date incorecte</title>
 </head>
 <body>
-Datele introduse nu sunt corecte
-<br>
-<a href="http://localhost:8080/ProjectMVC/user">inapoi la pagina de login</a>
+	Datele introduse nu sunt corecte
+	<br>
+	<a href="http://localhost:8080/ProjectMVC/user">inapoi la pagina de
+		login</a>
 </body>
 </html>

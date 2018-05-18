@@ -20,6 +20,7 @@
 			</tr>
 		</table>
 	</form:form>
+
 	<br>
 	<br> lista statiilor:
 	<br>
@@ -48,8 +49,7 @@
 
 		<input type="submit" value="Detalii" />
 	</form:form>
-	
-	
+
 
 	<form:form method="POST" action="/ProjectMVC/logout">
 		<input type="submit" value="Logout">

@@ -56,12 +56,4 @@ public class BaseDaoJpa<T> implements BaseDao<T> {
 		EntityManager em = getEntityManager();
 		return em.find(entityClass, id);
 	}
-
-	// @Override
-	// public List<T> getAll() {
-	// EntityManager em = getEntityManager();
-	// Query query = em.createQuery("SELECT * FROM ");
-	//
-	// return (List<T>) query.getResultList();
-	// }
 }
