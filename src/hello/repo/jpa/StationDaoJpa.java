@@ -19,7 +19,7 @@ public class StationDaoJpa extends BaseDaoJpa<Station> implements StationDao {
 	}
 
 	@Autowired
-	private PortDaoJpa portJpa = new PortDaoJpa();
+	private PortDaoJpa portJpa;
 
 	public List<Station> getAll() {
 		EntityManager em = getEntityManager();

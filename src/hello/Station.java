@@ -17,6 +17,19 @@ import hello.Port;
 @Entity
 @Table(name = "statii")
 public class Station {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idStation")
+	private int idStation;
+
+	@Column(name = "ip")
+	private String ip;
+
+	@OneToMany(orphanRemoval = true)
+	@JoinColumn(name = "idStation")
+	private List<Port> ports = new ArrayList<>();
+
 	public Station(String ip, List<Port> ports) {
 		super();
 		this.ip = ip;
@@ -47,18 +60,6 @@ public class Station {
 		this.ip = ip;
 		this.ports = new ArrayList<>();
 	}
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idStation")
-	private int idStation;
-
-	@Column(name = "ip")
-	private String ip;
-
-	@OneToMany(orphanRemoval = true)
-	@JoinColumn(name = "idStation")
-	private List<Port> ports = new ArrayList<>();
 
 	public int getIdStation() {
 		return idStation;

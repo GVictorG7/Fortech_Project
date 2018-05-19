@@ -10,6 +10,18 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "useri")
 public class User {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
+
+	@Column(name = "user")
+	private String user;
+
+	@Column(name = "pass")
+	private String pass;
+
 	public User() {
 		super();
 	}
@@ -26,17 +38,6 @@ public class User {
 		this.user = user;
 		this.pass = pass;
 	}
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private int id;
-
-	@Column(name = "user")
-	private String user;
-
-	@Column(name = "pass")
-	private String pass;
 
 	public int getId() {
 		return id;

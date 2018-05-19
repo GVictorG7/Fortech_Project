@@ -26,6 +26,9 @@
   </build>
   
   <dependencies>
+  
+  		<!-- Spring Dependencies -->
+  		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -53,6 +56,8 @@
 			<version>1.2</version>
 		</dependency>
 		
+		<!-- Hibernate Dependencies -->
+		
     	<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -64,7 +69,5 @@
 			<version>5.1.6</version>
 			<scope>runtime</scope>
 		</dependency>
-		
 	</dependencies>
-
 </project>

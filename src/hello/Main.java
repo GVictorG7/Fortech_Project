@@ -7,7 +7,6 @@ public class Main {
 		// for (User u : jpa.getAll()) {
 		// System.out.println(u.getUser());
 		// }
-		//
 
 		// StationService stationService = new StationService();
 		// stationService.save(new Station("10.200.132.61"));

@@ -14,6 +14,22 @@ import hello.Service;
 @Entity
 @Table(name = "porturi")
 public class Port {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idPort")
+	private int idPort;
+
+	@Column(name = "nr")
+	private int nr;
+
+	@Column(name = "type")
+	private String type;
+
+	@OneToOne
+	@JoinColumn(name = "idService")
+	private Service service;
+
 	public Port(int nr, String type) {
 		super();
 		this.nr = nr;
@@ -38,21 +54,6 @@ public class Port {
 		this.type = type;
 		this.service = service;
 	}
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idPort")
-	private int idPort;
-
-	@Column(name = "nr")
-	private int nr;
-
-	@Column(name = "type")
-	private String type;
-
-	@OneToOne
-	@JoinColumn(name = "idService")
-	private Service service;
 
 	public int getIdPort() {
 		return idPort;

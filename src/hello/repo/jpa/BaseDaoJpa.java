@@ -7,14 +7,13 @@ import javax.persistence.Persistence;
 import hello.repo.BaseDao;
 
 public class BaseDaoJpa<T> implements BaseDao<T> {
+	private static final String PERSISTENCE_UNIT_NAME = "sample";
+	private static EntityManagerFactory factory;
 	protected Class<T> entityClass;
 
 	public BaseDaoJpa(Class<T> clazz) {
 		this.entityClass = clazz;
 	}
-
-	private static final String PERSISTENCE_UNIT_NAME = "sample";
-	private static EntityManagerFactory factory;
 
 	public static EntityManager getEntityManager() {
 		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);

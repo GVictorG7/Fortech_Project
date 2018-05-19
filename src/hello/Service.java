@@ -17,6 +17,25 @@ import hello.Vulnerability;
 @Entity
 @Table(name = "servicii")
 public class Service {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idService")
+	private int idService;
+
+	@Column(name = "type")
+	private String type;
+
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "version")
+	private String version;
+
+	@OneToMany(orphanRemoval = true)
+	@JoinColumn(name = "idService")
+	private List<Vulnerability> vulnerabilities = new ArrayList<>();
+
 	public Service(String type, String name, String version, List<Vulnerability> vulnerabilities) {
 		super();
 		this.type = type;
@@ -36,24 +55,6 @@ public class Service {
 		this.name = name;
 		this.version = version;
 	}
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idService")
-	private int idService;
-
-	@Column(name = "type")
-	private String type;
-
-	@Column(name = "name")
-	private String name;
-
-	@Column(name = "version")
-	private String version;
-
-	@OneToMany(orphanRemoval = true)
-	@JoinColumn(name = "idService")
-	private List<Vulnerability> vulnerabilities = new ArrayList<>();
 
 	public int getIdService() {
 		return idService;

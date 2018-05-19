@@ -32,5 +32,4 @@ public class PortService extends BaseServiceImpl<Port> implements BaseService<Po
 	public void delete(int id) {
 		portJpa.remove(id);
 	}
-
 }

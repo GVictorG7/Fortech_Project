@@ -10,5 +10,4 @@ public interface BaseDao<T> {
 	T get(int id);
 
 	// List<T> getAll();
-
 }

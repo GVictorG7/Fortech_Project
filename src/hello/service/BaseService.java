@@ -10,5 +10,4 @@ public interface BaseService<T> {
 	void save(T t);
 
 	void delete(int id);
-
 }

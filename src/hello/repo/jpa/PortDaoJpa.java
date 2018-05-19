@@ -10,5 +10,4 @@ public class PortDaoJpa extends BaseDaoJpa<Port> implements PortDao {
 	public PortDaoJpa() {
 		super(Port.class);
 	}
-
 }
